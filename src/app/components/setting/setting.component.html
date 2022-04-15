@@ -1,0 +1,22 @@
+<nz-col [nzSpan]="18">
+  <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+    <input
+      [(ngModel)]="tempId"
+      [disabled]="!isEdit"
+      type="text"
+      nz-input
+      placeholder="请输入车牌号"
+    />
+  </nz-input-group>
+  <ng-template #suffixIconButton>
+    <button
+      nz-button
+      nzType="primary"
+      nzSearch
+      (click)="clickButton()"
+      title="{{ title }}"
+    >
+      <i nz-icon nzType="{{ iconFlag }}" nzTheme="outline"></i>
+    </button>
+  </ng-template>
+</nz-col>

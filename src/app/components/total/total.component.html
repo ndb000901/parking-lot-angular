@@ -1,0 +1,53 @@
+<div>
+  <nz-row nzJustify="center">
+    <div nz-col nzSpan="10" style="text-align: center">
+      <nz-alert
+        nzType="info"
+        nzMessage="车库概览"
+        [nzAction]="button"
+      ></nz-alert>
+      <ng-template #button>
+        <button nz-button nzType="default" nzShape="circle" title="刷新" (click)="reload()">
+          <i nz-icon nzType="cloud-sync"></i>
+        </button>
+      </ng-template>
+    </div>
+  </nz-row>
+
+
+  <div style="height: 50px;"></div>
+
+  <nz-row [nzGutter]="16">
+    <nz-col [nzSpan]="12">
+      <nz-statistic
+        [nzValue]="getCarId()"
+        [nzTitle]="'车牌号'"
+        [nzValueStyle]="{ color: '#ffd700' }"
+      ></nz-statistic>
+    </nz-col>
+    <nz-col [nzSpan]="6">
+      <nz-statistic
+        [nzValue]="dateTime"
+        [nzTitle]="'开始时间'"
+        [nzValueStyle]="{ color: '#ff9933' }"
+      ></nz-statistic>
+    </nz-col>
+  </nz-row>
+
+  <nz-row [nzGutter]="16">
+    <nz-col [nzSpan]="12">
+      <nz-statistic
+        [nzValue]="(validSpaceNum | number)!"
+        [nzTitle]="'空闲'"
+        [nzValueStyle]="{ color: '#3F8600' }"
+      ></nz-statistic>
+    </nz-col>
+    <nz-col [nzSpan]="10">
+      <nz-statistic
+        [nzValue]="(invalidSpaceNum | number: '1.0-2')!"
+        [nzTitle]="'占用'"
+        [nzValueStyle]="{ color: '#CF1322' }"
+      ></nz-statistic>
+    </nz-col>
+  </nz-row>
+</div>

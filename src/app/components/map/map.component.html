@@ -1,0 +1,164 @@
+<div>
+  <!-- 1 -->
+  <div class="row" style="height: 60px">
+    <div class="square road" style="display: inline-block"></div>
+    <div class="square road" style="display: inline-block"></div>
+    <div class="square road" style="display: inline-block">马</div>
+    <div class="square road" style="display: inline-block">路</div>
+    <div class="square road" style="display: inline-block"></div>
+    <div class="square road" style="display: inline-block"></div>
+    <div class="square road" style="display: inline-block"></div>
+    <div class="square road" style="display: inline-block">马</div>
+    <div class="square road" style="display: inline-block">路</div>
+    <div class="square road" style="display: inline-block">
+      <i nz-icon nzType="cloud-sync" class="icon" title="刷新车位" (click)="getSpaces()"></i>
+    </div>
+    <div class="square road" style="display: inline-block">
+      <i nz-icon nzType="aim" nzTheme="outline" title="定位" class="icon" style="color: green;" (click)="getLocation()"></i>
+    </div>
+  </div>
+  <br />
+  <!-- 2 -->
+  <div class="row" style="height: 60px">
+    <div class="square shade" style="display: inline-block"></div>
+    <div class="square shade" style="display: inline-block"></div>
+    <div class="square shade" style="display: inline-block"></div>
+    <div class="square shade" style="display: inline-block"></div>
+    <div class="square shade" style="display: inline-block"></div>
+    <div class="square road" style="display: inline-block"></div>
+    <div class="square shade" style="display: inline-block"></div>
+    <div class="square shade" style="display: inline-block"></div>
+    <div class="square shade" style="display: inline-block"></div>
+    <div class="square shade" style="display: inline-block"></div>
+    <div class="square shade" style="display: inline-block"></div>
+  </div>
+  <br />
+  <!-- 3 -->
+  <div class="row" style="height: 60px">
+    <div class="square shade" style="display: inline-block"></div>
+    <div class="square shade" style="display: inline-block"></div>
+    <div class="square shade" style="display: inline-block"></div>
+    <div class="square shade" style="display: inline-block"></div>
+    <div class="square shade" style="display: inline-block"></div>
+    <div class="square road" style="display: inline-block"></div>
+    <div class="square shade" style="display: inline-block"></div>
+    <div class="square shade" style="display: inline-block"></div>
+    <div class="square shade" style="display: inline-block"></div>
+    <div class="square shade" style="display: inline-block"></div>
+    <div class="square shade" style="display: inline-block"></div>
+  </div>
+  <br />
+  <!-- 4 -->
+  <div class="row" style="height: 60px">
+    <div [class]="map.get('1;5;1')" style="display: inline-block">1</div>
+    <div class="square road" style="display: inline-block">
+      <i [class]="locationMap.get(1)" nz-icon nzType="{{iconType}}" nzTheme="twotone" nzTwotoneColor="#00ff00" ></i>
+    </div>
+    <div [class]="map.get('1;1;1')" style="display: inline-block">1</div>
+    <div [class]="map.get('1;1;2')" style="display: inline-block">2</div>
+    <div [class]="map.get('1;1;3')" style="display: inline-block">3</div>
+    <div class="square road" style="display: inline-block">
+      <i [class]="locationMap.get(2)" nz-icon nzType="{{iconType}}" nzTheme="twotone" nzTwotoneColor="#00ff00" ></i>
+    </div>
+    <div [class]="map.get('1;2;1')" style="display: inline-block">1</div>
+    <div [class]="map.get('1;2;2')" style="display: inline-block">2</div>
+    <div [class]="map.get('1;2;3')" style="display: inline-block">3</div>
+    <div class="square road" style="display: inline-block">
+      <i [class]="locationMap.get(3)" nz-icon nzType="{{iconType}}" nzTheme="twotone" nzTwotoneColor="#00ff00" ></i>
+    </div>
+    <div [class]="map.get('1;6;1')" style="display: inline-block">1</div>
+  </div>
+  <br />
+  <!-- 5 -->
+  <div class="row" style="height: 60px">
+    <div [class]="map.get('1;5;2')" style="display: inline-block">2</div>
+    <div class="square road" style="display: inline-block"></div>
+    <div class="square road" style="display: inline-block"></div>
+    <div class="square road" style="display: inline-block;">
+        <i [class]="locationMap.get(4)" nz-icon nzType="{{iconType}}" nzTheme="twotone" nzTwotoneColor="#00ff00" ></i>
+    </div>
+    <div class="square road" style="display: inline-block"></div>
+    <div class="square road" style="display: inline-block"></div>
+    <div class="square road" style="display: inline-block"></div>
+    <div class="square road" style="display: inline-block"></div>
+    <div class="square road" style="display: inline-block">
+      <i [class]="locationMap.get(5)" nz-icon nzType="{{iconType}}" nzTheme="twotone" nzTwotoneColor="#00ff00" ></i>
+    </div>
+    <div class="square road" style="display: inline-block"></div>
+    <div [class]="map.get('1;6;2')" style="display: inline-block">2</div>
+  </div>
+  <br />
+  <!-- 6 -->
+  <div class="row" style="height: 60px">
+    <div [class]="map.get('1;5;3')" style="display: inline-block">3</div>
+    <div class="square road" style="display: inline-block">
+      <i [class]="locationMap.get(6)" nz-icon nzType="{{iconType}}" nzTheme="twotone" nzTwotoneColor="#00ff00" ></i>
+    </div>
+    <div [class]="map.get('1;1;4')" style="display: inline-block">4</div>
+    <div [class]="map.get('1;1;5')" style="display: inline-block">5</div>
+    <div [class]="map.get('1;1;6')" style="display: inline-block">6</div>
+    <div class="square road" style="display: inline-block">
+      <i [class]="locationMap.get(7)" nz-icon nzType="{{iconType}}" nzTheme="twotone" nzTwotoneColor="#00ff00" ></i>
+    </div>
+    <div [class]="map.get('1;2;4')" style="display: inline-block">4</div>
+    <div [class]="map.get('1;2;5')" style="display: inline-block">5</div>
+    <div [class]="map.get('1;2;6')" style="display: inline-block">6</div>
+    <div class="square road" style="display: inline-block">
+      <i [class]="locationMap.get(8)" nz-icon nzType="{{iconType}}" nzTheme="twotone" nzTwotoneColor="#00ff00" ></i>
+    </div>
+    <div [class]="map.get('1;6;3')" style="display: inline-block">3</div>
+  </div>
+  <br />
+  <!-- 7 -->
+  <div class="row" style="height: 60px">
+    <div [class]="map.get('1;5;4')" style="display: inline-block">4</div>
+    <div class="square road" style="display: inline-block"></div>
+    <div [class]="map.get('1;3;1')" style="display: inline-block">1</div>
+    <div [class]="map.get('1;3;2')" style="display: inline-block">2</div>
+    <div [class]="map.get('1;3;3')" style="display: inline-block">3</div>
+    <div class="square road" style="display: inline-block"></div>
+    <div [class]="map.get('1;4;1')" style="display: inline-block">1</div>
+    <div [class]="map.get('1;4;2')" style="display: inline-block">2</div>
+    <div [class]="map.get('1;4;3')" style="display: inline-block">3</div>
+    <div class="square road" style="display: inline-block"></div>
+    <div [class]="map.get('1;6;4')" style="display: inline-block">4</div>
+  </div>
+  <br />
+  <!-- 8 -->
+  <div class="row" style="height: 60px">
+    <div [class]="map.get('1;5;5')" style="display: inline-block">5</div>
+    <div class="square road" style="display: inline-block"></div>
+    <div class="square road" style="display: inline-block"></div>
+    <div class="square road" style="display: inline-block">
+      <i [class]="locationMap.get(9)" nz-icon nzType="{{iconType}}" nzTheme="twotone" nzTwotoneColor="#00ff00" ></i>
+    </div>
+    <div class="square road" style="display: inline-block"></div>
+    <div class="square road" style="display: inline-block"></div>
+    <div class="square road" style="display: inline-block"></div>
+    <div class="square road" style="display: inline-block">
+      <i [class]="locationMap.get(10)" nz-icon nzType="{{iconType}}" nzTheme="twotone" nzTwotoneColor="#00ff00" ></i>
+    </div>
+    <div class="square road" style="display: inline-block"></div>
+    <div class="square road" style="display: inline-block"></div>
+    <div [class]="map.get('1;6;5')" style="display: inline-block">5</div>
+  </div>
+  <br />
+  <!-- 9 -->
+  <div class="row" style="height: 60px">
+    <div [class]="map.get('1;5;6')" style="display: inline-block">6</div>
+    <div class="square road" style="display: inline-block">
+      <i [class]="locationMap.get(11)" nz-icon nzType="{{iconType}}" nzTheme="twotone" nzTwotoneColor="#00ff00" ></i>
+    </div>
+    <div [class]="map.get('1;3;4')" style="display: inline-block">4</div>
+    <div [class]="map.get('1;3;5')" style="display: inline-block">5</div>
+    <div [class]="map.get('1;3;6')" style="display: inline-block">6</div>
+    <div class="square shade" style="display: inline-block"></div>
+    <div [class]="map.get('1;4;4')" style="display: inline-block">4</div>
+    <div [class]="map.get('1;4;5')" style="display: inline-block">5</div>
+    <div [class]="map.get('1;4;6')" style="display: inline-block">6</div>
+    <div class="square road" style="display: inline-block">
+      <i [class]="locationMap.get(12)" nz-icon nzType="{{iconType}}" nzTheme="twotone" nzTwotoneColor="#00ff00" ></i>
+    </div>
+    <div [class]="map.get('1;6;6')" style="display: inline-block">6</div>
+  </div>
+</div>

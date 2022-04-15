@@ -1,0 +1,76 @@
+.color-lump {
+  width: 80px;
+  height: 80px;
+  background-color: #33cd5f;
+  // display: inline;
+}
+
+// 路
+.road {
+  background-color: #ffbf00;
+}
+
+// 不可用区域
+.shade {
+  background-color: #808080;
+}
+
+// 方块规则
+.square {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  vertical-align: top;
+  text-align: center;
+}
+
+.area-1 {
+  background-color: #40ff00;
+}
+.area-2 {
+  background-color: #00ffff;
+}
+.area-3 {
+  background-color: #ffb3ff;
+}
+.area-4 {
+  background-color: #ffaa80;
+}
+.area-5 {
+  background-color: #99ffff;
+}
+.area-6 {
+  background-color: #99ccff;
+}
+
+.row {
+  display: inline-flex;
+  vertical-align: top;
+}
+
+.off {
+  margin: 0px auto;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(
+    50deg,
+    rgba(255, 1, 1, 0.5) 0,
+    rgba(255, 1, 1, 0.5) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 1, 1, 0.5) 50%,
+    rgba(255, 1, 1, 0.5) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 10px 10px;
+}
+
+.icon {
+  font-size: 30px;
+  
+}
+
+.icon-off {
+  display: none;
+}
